@@ -62,7 +62,7 @@ export default function Home() {
               {settings?.hero_subtitle || "Tempat bertumbuh, belajar, berkarya, dan menjadi pribadi yang mandiri."}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <Button asChild className="h-12 sm:h-14 px-6 rounded-full bg-gradient-to-r from-orange-600 from-0% via-amber-400 via-40% to-yellow-300 to-100% hover:brightness-105 text-white font-bold text-base shadow-xl shadow-orange-200" data-testid="hero-cta-profile">
+              <Button asChild className="h-12 sm:h-14 px-6 rounded-full bg-amber-300 bg-gradient-to-r from-orange-600 via-orange-500/60 to-transparent hover:brightness-105 text-white font-bold text-base shadow-xl shadow-orange-200" data-testid="hero-cta-profile">
                 <Link to="/profil">Kenali Sekolah Kami <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
               <Button asChild variant="outline" className="h-12 sm:h-14 px-6 rounded-full border-2 border-stone-900 bg-white hover:bg-amber-50 text-stone-900 font-bold text-base" data-testid="hero-cta-ppdb">
