@@ -1,0 +1,150 @@
+{
+  "project_name": "SKh Pelita Al-Karomah - Sekolah Khusus Website & CMS Dashboard",
+  "app_type": "hybrid_fullstack",
+  "target_audience": "Parents of children with special needs (ABK), special education teachers, government/education inspectors, and school administrative staff in Indonesia",
+  "language": "Bahasa Indonesia (ID)",
+  "brand_identity": {
+    "theme_type": "Light Theme Priority (Warm, Trustworthy, Professional, Accessible, Family-Oriented)",
+    "primary_emotion": "Empathetic, encouraging, clear, safe, and professional special-needs educational sanctuary",
+    "forbidden_styles": [
+      "NO blue as primary color",
+      "NO childish comic fonts (e.g. Comic Sans, Fredoka)",
+      "NO generic Inter/Roboto slop without character",
+      "NO cramped desktop-first tables that break on mobile smartphones",
+      "NO hidden desktop navigation links inside mobile-only hamburger"
+    ]
+  },
+  "colors": {
+    "primary_orange": {
+      "main": "#EA580C",
+      "light": "#FF8C42",
+      "hover": "#C2410C",
+      "soft_bg": "#FFF7ED",
+      "border": "#FFD8A8"
+    },
+    "secondary_yellow": {
+      "main": "#EAB308",
+      "bright": "#FACC15",
+      "warm_amber": "#D97706",
+      "soft_bg": "#FEFCE8",
+      "badge_bg": "#FEF3C7"
+    },
+    "neutrals": {
+      "background_white": "#FFFFFF",
+      "card_bg_warm": "#FAFAF9",
+      "section_bg_alt": "#F5F5F4",
+      "border_subtle": "#E7E5E4",
+      "text_dark_charcoal": "#1C1917",
+      "text_muted": "#57534E",
+      "text_light_on_orange": "#FFFFFF"
+    },
+    "accessibility_status_colors": {
+      "success_green": "#15803D",
+      "info_amber": "#B45309",
+      "alert_red": "#B91C1C",
+      "focus_ring": "#EA580C"
+    }
+  },
+  "typography": {
+    "heading_font": "Plus Jakarta Sans, sans-serif (Indonesian modern, warm, authoritative)",
+    "body_font": "Plus Jakarta Sans, sans-serif",
+    "font_scale": {
+      "h1_hero": "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight",
+      "h2_section": "text-2xl sm:text-3xl font-bold tracking-tight text-stone-900",
+      "h3_card": "text-xl sm:text-2xl font-semibold text-stone-800",
+      "body_base": "text-base sm:text-lg leading-relaxed text-stone-700",
+      "body_sm": "text-sm sm:text-base text-stone-600",
+      "caption_label": "text-xs sm:text-sm font-semibold tracking-wider uppercase text-amber-700"
+    },
+    "text_size_toggle_strategy": {
+      "context_provider": "AccessibilityContext providing fontSize state ('normal' | 'large')",
+      "normal_mode": "Root class 'font-normal-mode' with standard base text 16px (1rem)",
+      "large_mode": "Root class 'font-large-mode' scaling base text to 18px (1.125rem) with +2px boost across p, span, h1-h6, and button labels for parents with low vision or cognitive strain",
+      "ui_widget": "Floating or top bar toggle buttons 'A' / 'A+' or 'Ukuran Teks: Normal | Besar' with active state highlighting (#EA580C bg)"
+    }
+  },
+  "accessibility_and_mobile_rules": {
+    "minimum_touch_target": "44px height x 44px width minimum on all buttons, links, inputs, and tabs (py-3 px-4 minimum)",
+    "wcag_contrast": "Text to background ratio >= 4.5:1 (Dark Charcoal #1C1917 on White/Orange bg with bold white text)",
+    "focus_states": "Visible 3px solid focus ring (ring-2 ring-orange-500 ring-offset-2)",
+    "mobile_first_grid": "All grid sections must be single column (grid-cols-1) on mobile screens (<640px) and expand smoothly to 2 or 3 columns on tablet (md) and desktop (lg)",
+    "testing_attribute": "data-testid mandatory on all interactive elements (e.g. data-testid='ppdb-submit-button', data-testid='text-size-toggle-large')"
+  },
+  "layout_and_navigation": {
+    "header": {
+      "top_bar": "Warm Orange (#EA580C) strip with quick contacts (WhatsApp, Telp, Jam Operasional, Text-Size Toggle)",
+      "main_navbar": "Sticky header with backdrop blur (bg-white/95 backdrop-blur-md border-b border-stone-200 z-50). Visible nav items on desktop: Beranda, Profil, Program, Guru & Tendik, Berita, Galeri, PPDB, Kontak. Mobile hamburger menu drawer with clear 48px touch targets.",
+      "ppdb_cta": "Prominent Orange Pill Button: 'Daftar PPDB Online' with yellow indicator dot or star badge"
+    },
+    "footer": {
+      "background": "Deep Charcoal / Warm Dark Brown (#1C1917)",
+      "content": "School logo, brief mission statement, address map link, quick links, contacts (WhatsApp hotline), and accreditation badge (Terakreditasi B/A)"
+    }
+  },
+  "key_public_pages": {
+    "beranda": [
+      "Hero Banner with student & teacher hero photo, school tag line 'Mendidik dengan Hati, Menumbuhkan Kemandirian Anak Spesial', PPDB CTA, and quick stats (Jumlah Siswa ABK, Terapi, Guru Pendamping Khusus)",
+      "Sambutan Kepala Sekolah with photo and warm personal message",
+      "Pilihan Program Cards (SDLB, SMPLB, SMALB, Program Kemandirian & Terapi)",
+      "Keunggulan Sekolah Bento Grid (Kurikulum Disesuaikan, Terapi Okupasi/Wicara, Ruang Sensori, Lingkungan Ramah ABK)",
+      "Berita & Agenda Terbaru Slider/Grid",
+      "Testimoni Orang Tua (Warm quotes from parents)"
+    ],
+    "profil": [
+      "Tentang SKh Pelita Al-Karomah & Sejarah Singkat",
+      "Visi & Misi Sekolah",
+      "Fasilitas Sekolah (Ruang Kelas Sensori, Ruang Terapi, Area Olahraga, Galeri Karya)"
+    ],
+    "program": [
+      "Jenjang Pendidikan (SDLB, SMPLB, SMALB)",
+      "Program Keterampilan & Kemandirian (Tata Boga, Kerajinan Tangan, IT Dasar)",
+      "Layanan Terapi Khusus (Terapi Wicara, Terapi Okupasi, Bina Diri)"
+    ],
+    "guru_and_tendik": [
+      "Filterable grid of qualified special education teachers (GPK) and therapists with photo, full name, role, and specialization badges"
+    ],
+    "berita_and_galeri": [
+      "Berita & Artikel listing with search & category filter",
+      "Galeri Kegiatan image grid with lightbox view and filter tabs (Kegiatan Belajar, Terapi, Pentas Seni, Ekstrakulikuler)"
+    ],
+    "ppdb": [
+      "Multi-step / Multi-section PPDB Form (Data Calon Siswa, Kebutuhan Khusus/Diagnosa, Data Orang Tua, Unggah Dokumen / Kontak Rapid Register)",
+      "Alur Pendaftaran diagram & Syarat Pendaftaran checklist"
+    ],
+    "kontak": [
+      "Interactive WhatsApp Direct Chat button, Location map info, School operational hours, Contact form"
+    ]
+  },
+  "admin_cms_dashboard": {
+    "theme": "Matches warm brand family (#FAFAF9 background, #1C1917 sidebar header with Orange active nav links)",
+    "key_modules": [
+      "Overview Dashboard (Total Siswa, Pendaftar PPDB Baru, Jumlah Berita, Agenda Mendatang)",
+      "Kelola PPDB (Table with filter status 'Menunggu', 'Diterima', 'Wawancara', Export/Detail Modal)",
+      "CMS Berita & Agenda (Create/Edit/Delete articles with rich content input & image URL)",
+      "Kelola Galeri (Upload/Delete event images & assign categories)",
+      "Kelola Guru & Tendik (Add/Edit teacher profiles)",
+      "Pengaturan Sekolah (Ubah Kontak, Sambutan Kepala Sekolah, Visi Misi)"
+    ]
+  },
+  "image_urls": {
+    "hero_school": "https://images.unsplash.com/photo-1577896851231-70ef18881754?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxzcGVjaWFsJTIwbmVlZHMlMjBlZHVjYXRpb24lMjB0ZWFjaGVyJTIwc3R1ZGVudCUyMGNsYXNzcm9vbXxlbnwwfHx8fDE3ODk3NDU3MTB8MA&ixlib=rb-4.1.0&q=85",
+    "indonesian_students": "https://images.unsplash.com/photo-1615466178532-b6d2f9c304de?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxhc2lhbiUyMHRlYWNoZXIlMjBlbGVtZW50YXJ5JTIwc2Nob29sJTIwc3R1ZGVudHMlMjBzbWlsaW5nJTIwaW5kb25lc2lhfGVufDB8fHx8MTc4OTc0NTcxMHww&ixlib=rb-4.1.0&q=85",
+    "classroom_learning": "https://images.pexels.com/photos/4173338/pexels-photo-4173338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "therapy_and_music": "https://images.unsplash.com/photo-1780039298271-f3e1318eb3ae?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHxpbmNsdXNpdmUlMjBzY2hvb2wlMjBhcnQlMjBtdXNpYyUyMHRoZXJhcHklMjB0aGVyYXB5JTIwcm9vbSUyMGtpZHN8ZW58MHx8fHwxNzg5NzQ1NzEwfDA&ixlib=rb-4.1.0&q=85",
+    "art_and_creativity": "https://images.pexels.com/photos/7494914/pexels-photo-7494914.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "sensory_room": "https://images.unsplash.com/photo-1694885146901-b1d05cb1f549?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHw3fHxpbmNsdXNpdmUlMjBzY2hvb2wlMjBhcnQlMjBtdXNpYyUyMHRoZXJhcHklMjB0aGVyYXB5JTIwcm9vbSUyMGtpZHN8ZW58MHx8fHwxNzg5NzQ1NzEwfDA&ixlib=rb-4.1.0&q=85",
+    "teacher_principal": "https://images.pexels.com/photos/37795357/pexels-photo-37795357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+  },
+  "instructions_to_main_agent": [
+    "Ensure the website language is entirely in Bahasa Indonesia (ID) with natural, respectful educational terms.",
+    "Implement the Text-Size Accessibility toggle in the top bar or floating header so clicking 'Besar' dynamically enlarges text across the page for better readability.",
+    "Ensure touch targets are at least 44px on mobile viewports for easy tapping by parents.",
+    "All forms (PPDB registration, contact form, CMS editors) must use clear validation, status toasts (Sonner), and accessible labels with data-testid attributes.",
+    "Do NOT use blue as primary buttons or background colors. Rely strictly on Orange (#EA580C) as primary, Yellow (#EAB308 / #FACC15) as secondary highlight, White/Cream for clean backgrounds, and Dark Charcoal (#1C1917) for legible typography."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": {
+    "data_testid_requirement": "All interactive buttons, inputs, links, tabs, and CMS controls MUST contain data-testid attributes.",
+    "no_transparent_dropdowns": "Ensure headers, dropdown menus, and popovers have solid or heavy backdrop-blur backgrounds so text underneath does not bleed.",
+    "mobile_first_execution": "Always test mobile layout first. Cards should stack vertically, navigation should collapse cleanly into a mobile drawer, and tables in the admin dashboard should scroll horizontally or collapse into stacked cards on narrow screens."
+  }
+}
