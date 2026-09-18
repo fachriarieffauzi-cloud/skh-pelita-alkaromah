@@ -54,15 +54,15 @@ export default function Home() {
             <span className="inline-flex items-center gap-2 rounded-full bg-white/80 border border-orange-200 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-orange-700 shadow-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-orange-600" /> Sekolah Khusus
             </span>
-            <h1 className="font-display mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-[1.05] tracking-tight">
+            <h1 className="font-display mt-5 text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-[1.05] tracking-tight">
               <span className="block">Selamat Datang di</span>
-              <span className="block">SKh Pelita Al-Karomah</span>
+              <span className="block whitespace-nowrap">SKh Pelita Al-Karomah</span>
             </h1>
             <p className="mt-5 text-base sm:text-lg lg:text-xl text-stone-700 max-w-xl leading-relaxed">
               {settings?.hero_subtitle || "Tempat bertumbuh, belajar, berkarya, dan menjadi pribadi yang mandiri."}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <Button asChild className="h-12 sm:h-14 px-6 rounded-full bg-orange-600 hover:bg-orange-700 text-white font-bold text-base shadow-xl shadow-orange-200" data-testid="hero-cta-profile">
+              <Button asChild className="h-12 sm:h-14 px-6 rounded-full bg-gradient-to-r from-orange-600 from-0% via-amber-400 via-40% to-yellow-300 to-100% hover:brightness-105 text-white font-bold text-base shadow-xl shadow-orange-200" data-testid="hero-cta-profile">
                 <Link to="/profil">Kenali Sekolah Kami <ArrowRight className="ml-2 h-4 w-4" /></Link>
               </Button>
               <Button asChild variant="outline" className="h-12 sm:h-14 px-6 rounded-full border-2 border-stone-900 bg-white hover:bg-amber-50 text-stone-900 font-bold text-base" data-testid="hero-cta-ppdb">

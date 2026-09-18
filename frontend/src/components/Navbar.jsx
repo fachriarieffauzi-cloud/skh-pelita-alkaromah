@@ -25,7 +25,7 @@ export default function Navbar({ settings }) {
 
   return (
     <header className="sticky top-0 z-40 w-full bg-white/95 backdrop-blur-md border-b border-stone-200" data-testid="navbar">
-      <div className="hidden md:flex items-center justify-end gap-3 bg-gradient-to-r from-orange-600 via-orange-500 to-amber-400 text-white text-xs px-4 py-1.5">
+      <div className="hidden md:flex items-center justify-end gap-3 bg-gradient-to-r from-orange-600 from-0% via-amber-400 via-40% to-yellow-300 to-100% text-white text-xs px-4 py-1.5">
         <span className="hidden lg:inline">{settings?.service_hours || "Senin - Jumat, 07.30 - 14.00 WIB"}</span>
         <span className="opacity-40">|</span>
         <span>WhatsApp: {settings?.whatsapp || "[Nomor WhatsApp]"}</span>
@@ -78,7 +78,7 @@ export default function Navbar({ settings }) {
         <div className="hidden lg:flex items-center gap-2">
           <Button
             onClick={() => navigate("/ppdb")}
-            className="bg-orange-600 hover:bg-orange-700 text-white rounded-full px-5 h-11 font-semibold shadow-lg shadow-orange-200"
+            className="bg-gradient-to-r from-orange-600 from-0% via-amber-400 via-40% to-yellow-300 to-100% hover:brightness-105 text-white rounded-full px-5 h-11 font-semibold shadow-lg shadow-orange-200"
             data-testid="cta-daftar-desktop"
           >
             Daftar Sekarang
