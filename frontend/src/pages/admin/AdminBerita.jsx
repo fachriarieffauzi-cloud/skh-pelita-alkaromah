@@ -46,14 +46,14 @@ export default function AdminBerita() {
           <DialogContent className="max-w-2xl bg-white">
             <DialogHeader><DialogTitle>{editingId ? "Ubah Berita" : "Tambah Berita"}</DialogTitle></DialogHeader>
             <div className="space-y-4">
-              <div><Label>Judul</Label><Input value={form.title} onChange={(e) => upd("title", e.target.value)} /></div>
+              <div><Label>Judul</Label><Input data-testid="news-title-input" value={form.title} onChange={(e) => upd("title", e.target.value)} /></div>
               <div className="grid sm:grid-cols-2 gap-4">
-                <div><Label>Kategori</Label><Input value={form.category} onChange={(e) => upd("category", e.target.value)} /></div>
-                <div className="flex items-center gap-3 mt-6"><Switch checked={form.published} onCheckedChange={(v) => upd("published", v)} /><span className="text-sm">{form.published ? "Dipublikasikan" : "Draft"}</span></div>
+                <div><Label>Kategori</Label><Input data-testid="news-category-input" value={form.category} onChange={(e) => upd("category", e.target.value)} /></div>
+                <div className="flex items-center gap-3 mt-6"><Switch data-testid="news-published-switch" checked={form.published} onCheckedChange={(v) => upd("published", v)} /><span className="text-sm">{form.published ? "Dipublikasikan" : "Draft"}</span></div>
               </div>
-              <div><Label>URL Gambar</Label><Input value={form.image_url} onChange={(e) => upd("image_url", e.target.value)} placeholder="https://..." /></div>
-              <div><Label>Ringkasan</Label><Textarea value={form.summary} onChange={(e) => upd("summary", e.target.value)} rows={2} /></div>
-              <div><Label>Isi Berita</Label><Textarea value={form.content} onChange={(e) => upd("content", e.target.value)} rows={8} /></div>
+              <div><Label>URL Gambar</Label><Input data-testid="news-image-url-input" value={form.image_url} onChange={(e) => upd("image_url", e.target.value)} placeholder="https://..." /></div>
+              <div><Label>Ringkasan</Label><Textarea data-testid="news-summary-input" value={form.summary} onChange={(e) => upd("summary", e.target.value)} rows={2} /></div>
+              <div><Label>Isi Berita</Label><Textarea data-testid="news-content-input" value={form.content} onChange={(e) => upd("content", e.target.value)} rows={8} /></div>
             </div>
             <DialogFooter><Button onClick={save} className="bg-orange-600 hover:bg-orange-700 text-white" data-testid="save-news-btn">Simpan</Button></DialogFooter>
           </DialogContent>

@@ -9,10 +9,17 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     (async () => {
+      const hasToken = !!localStorage.getItem("skh_token");
+      if (!hasToken) {
+        setUser(false);
+        setLoading(false);
+        return;
+      }
       try {
         const { data } = await api.get("/auth/me");
         setUser(data);
       } catch {
+        localStorage.removeItem("skh_token");
         setUser(false);
       } finally {
         setLoading(false);

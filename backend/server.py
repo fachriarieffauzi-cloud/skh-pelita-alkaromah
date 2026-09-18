@@ -252,6 +252,7 @@ async def get_settings_doc() -> dict:
         default = SiteSettings().model_dump()
         default["id"] = SETTINGS_ID
         await db.settings.insert_one(default)
+        default.pop("_id", None)
         return default
     doc.pop("_id", None)
     return doc

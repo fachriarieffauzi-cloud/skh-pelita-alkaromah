@@ -44,9 +44,13 @@ export default function Navbar({ settings }) {
 
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
         <Link to="/" className="flex items-center gap-3" data-testid="logo-link">
-          <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center text-white font-display font-bold text-lg shadow-md shadow-orange-200">
-            P
-          </div>
+          {settings?.logo_url ? (
+            <img src={settings.logo_url} alt="Logo" className="h-11 w-11 rounded-xl object-cover shadow-md shadow-orange-200" />
+          ) : (
+            <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center text-white font-display font-bold text-lg shadow-md shadow-orange-200">
+              P
+            </div>
+          )}
           <div className="leading-tight">
             <div className="font-display font-bold text-stone-900 text-base sm:text-lg">SKh Pelita Al-Karomah</div>
             <div className="text-[10px] sm:text-xs text-orange-700 font-semibold tracking-widest uppercase">Sekolah Khusus</div>
