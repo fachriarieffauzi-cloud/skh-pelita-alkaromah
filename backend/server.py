@@ -78,7 +78,7 @@ class SiteSettings(BaseModel):
     logo_url: str = ""
     about_short: str = "SKh Pelita Al-Karomah adalah Sekolah Khusus yang berkomitmen mendampingi setiap peserta didik untuk tumbuh sesuai potensinya, mandiri, dan berkarakter."
     about_long: str = "Kami hadir sebagai rumah belajar yang hangat dan inklusif, tempat setiap anak berkebutuhan khusus dihargai keunikannya. Melalui pembelajaran yang disesuaikan, program kemandirian, dan dukungan terapi, kami membantu peserta didik siap berpartisipasi di lingkungan keluarga dan masyarakat."
-    principal_name: str = "[Nama Kepala Sekolah]"
+    principal_name: str = "Rustiyanah S.Pd"
     principal_message: str = "Selamat datang di SKh Pelita Al-Karomah. Kami percaya setiap anak istimewa memiliki potensi yang luar biasa. Melalui pendampingan yang penuh kasih, kami membimbing peserta didik untuk berkembang, mandiri, dan bahagia."
     principal_photo_url: str = "https://images.pexels.com/photos/37795357/pexels-photo-37795357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
     visi: str = "Mewujudkan peserta didik yang berkembang sesuai potensi, mandiri, berkarakter, dan mampu berpartisipasi dalam kehidupan bermasyarakat."
@@ -90,7 +90,7 @@ class SiteSettings(BaseModel):
         "Menjalin kolaborasi erat dengan orang tua dan masyarakat.",
     ]
     address: str = "[Alamat Sekolah]"
-    whatsapp: str = "[Nomor WhatsApp]"
+    whatsapp: str = "085211612045"
     email: str = "[Email Sekolah]"
     service_hours: str = "Senin - Jumat, 07.30 - 14.00 WIB"
     maps_embed: str = ""
