@@ -55,7 +55,8 @@ export default function Home() {
               <span className="h-1.5 w-1.5 rounded-full bg-orange-600" /> Sekolah Khusus
             </span>
             <h1 className="font-display mt-5 text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 leading-[1.05] tracking-tight">
-              {settings?.hero_title || "Selamat Datang di SKh Pelita Al-Karomah"}
+              <span className="block">Selamat Datang di</span>
+              <span className="block">SKh Pelita Al-Karomah</span>
             </h1>
             <p className="mt-5 text-base sm:text-lg lg:text-xl text-stone-700 max-w-xl leading-relaxed">
               {settings?.hero_subtitle || "Tempat bertumbuh, belajar, berkarya, dan menjadi pribadi yang mandiri."}
