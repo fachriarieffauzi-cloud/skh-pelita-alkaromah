@@ -7,9 +7,13 @@ export default function Footer({ settings }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center text-white font-display font-bold text-lg">
-              P
-            </div>
+            {settings?.logo_url ? (
+              <img src={settings.logo_url} alt="Logo" className="h-12 w-12 object-contain" />
+            ) : (
+              <div className="h-11 w-11 rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center text-white font-display font-bold text-lg">
+                P
+              </div>
+            )}
             <div>
               <div className="font-display font-bold text-white text-lg">SKh Pelita Al-Karomah</div>
               <div className="text-xs text-amber-300 uppercase tracking-widest font-semibold">Sekolah Khusus</div>
