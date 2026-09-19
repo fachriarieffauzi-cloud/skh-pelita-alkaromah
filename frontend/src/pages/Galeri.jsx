@@ -16,7 +16,7 @@ const getImageUrl = (url) => {
   const fileId = fileMatch?.[1] || idMatch?.[1];
 
   if (fileId) {
-    return https://drive.google.com/thumbnail?id=${fileId}&sz=w1600;
+    return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1600`;
   }
 
   return value;
