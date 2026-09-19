@@ -2,7 +2,25 @@ import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
+const getImageUrl = (url) => {
+  if (!url) return "";
 
+  const value = url.trim();
+
+  const fileMatch = value.match(
+    /drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/
+  );
+
+  const idMatch = value.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+
+  const fileId = fileMatch?.[1] || idMatch?.[1];
+
+  if (fileId) {
+    return https://drive.google.com/thumbnail?id=${fileId}&sz=w1600;
+  }
+
+  return value;
+};
 const CATEGORIES = ["Semua", "Kegiatan Pembelajaran", "Kegiatan Sekolah", "Ekstrakurikuler", "Perayaan", "Kegiatan Siswa"];
 
 export default function Galeri() {
@@ -37,7 +55,7 @@ export default function Galeri() {
         <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {filtered.map((g) => (
             <button key={g.id} onClick={() => setSelected(g)} className="rounded-xl overflow-hidden bg-stone-100 hover:opacity-90 transition group" data-testid={`gallery-item-${g.id}`}>
-              <img src={g.image_url} alt={g.caption} className="w-full aspect-square object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+              <img src={getImageUrl(g.image_url)} alt={g.caption} className="w-full aspect-square object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
             </button>
           ))}
           {filtered.length === 0 && <div className="text-stone-500 col-span-full">Belum ada foto di kategori ini.</div>}
@@ -48,7 +66,7 @@ export default function Galeri() {
         <DialogContent className="max-w-4xl bg-white p-0 overflow-hidden">
           {selected && (
             <div>
-              <img src={selected.image_url} alt={selected.caption} className="w-full max-h-[70vh] object-contain bg-stone-900" />
+              <img src={getImageUrl(selected.image_url)} alt={selected.caption} className="w-full max-h-[70vh] object-contain bg-stone-900" />
               <div className="p-5">
                 <div className="text-xs font-bold uppercase tracking-widest text-orange-700">{selected.category}</div>
                 <div className="mt-1 text-stone-800 font-semibold">{selected.caption}</div>
