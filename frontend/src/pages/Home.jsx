@@ -77,7 +77,7 @@ export default function Home() {
               <img
                 src={settings?.hero_image_url}
                 alt="Suasana belajar di SKh Pelita Al-Karomah"
-                className="w-full h-[320px] sm:h-[420px] lg:h-[520px] object-cover"
+                className="w-full h-[300px] sm:h-[400px] lg:h-[480px] object-cover"
                 loading="eager"
               />
             </div>
