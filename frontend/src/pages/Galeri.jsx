@@ -55,7 +55,7 @@ export default function Galeri() {
         <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {filtered.map((g) => (
             <button key={g.id} onClick={() => setSelected(g)} className="rounded-xl overflow-hidden bg-stone-100 hover:opacity-90 transition group" data-testid={`gallery-item-${g.id}`}>
-              <img src={getImageUrl(g.image_url)} alt={g.caption} className="w-full aspect-square object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+              <img src={getImageUrl(g.image_url)} alt={g.caption} className="w-full aspect-square object-cover group-hover:scale-105 transition duration-500"  />
             </button>
           ))}
           {filtered.length === 0 && <div className="text-stone-500 col-span-full">Belum ada foto di kategori ini.</div>}
